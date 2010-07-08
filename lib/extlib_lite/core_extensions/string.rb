@@ -4,11 +4,16 @@ module CoreExtensions
     ##
     # Convert to hash from a query string.
     #
-    #   "FooBar".snake_case           #=> "foo_bar"
-    #   "HeadlineCNNNews".snake_case  #=> "headline_cnn_news"
-    #   "CNN".snake_case              #=> "cnn"
+    # "text_message%5Bto%5D=61447100308&text_message%5Bfrom%5D=61447100547&text_message%5Bmsg%5D=Edin%20knif%20lie%20km&text_message%5Bdate%5D=2010-05-13%2023%3A59%3A58".from_query #=> {
+    #   "text_message"=>{
+    #     "to"=>"61447100308",
+    #     "from"=>"61447100547",
+    #     "msg"=>"Edin knif lie km",
+    #     "date"=>"2010-05-13 23:59:58"
+    #   }
+    # }
     #
-    # @return [Hash] Receiver converted to snake case.
+    # @return [Hash] Query string converted to hash.
     #
     # @api public
     def from_query
