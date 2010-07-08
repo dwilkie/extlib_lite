@@ -17,6 +17,7 @@ Currently extlib_lite supports the following functions
 ## Installation
 
     gem install extlib_lite
+    require 'extlib_lite'
 
 Copyright (c) 2010 David Wilkie, released under the MIT license
 
