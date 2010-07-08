@@ -14,6 +14,20 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "README.markdown"
   ]
+  s.files = [
+    ".gitignore",
+     "MIT-LICENSE",
+     "README.markdown",
+     "Rakefile",
+     "VERSION",
+     "extlib_lite.gemspec",
+     "lib/extlib_lite.rb",
+     "lib/extlib_lite/core_extensions.rb",
+     "lib/extlib_lite/core_extensions/hash.rb",
+     "lib/extlib_lite/core_extensions/string.rb",
+     "lib/extlib_lite/inflections.rb",
+     "todo"
+  ]
   s.homepage = %q{http://github.com/dwilkie/extlib_lite}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
