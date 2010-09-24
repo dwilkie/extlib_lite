@@ -51,6 +51,25 @@ module CoreExtensions
       gsub(/([a-z])([A-Z])/, '\1_\2').
       downcase
     end
+
+    # +constantize+ tries to find a declared constant with the name specified
+    # in the string. It raises a NameError when the name is not in CamelCase
+    # or is not initialized.
+    #
+    # Examples
+    #   "Module".constantize # => Module
+    #   "Class".constantize  # => Class
+    def constantize
+      names = split('::')
+      names.shift if names.empty? || names.first.empty?
+
+      constant = Object
+      second_argument = Module.method(:const_get).arity == 1 ? nil : false
+      names.each do |name|
+        constant = constant.const_defined?(name, second_argument) ? constant.const_get(name) : constant.const_missing(name)
+      end
+      constant
+    end
   end
 end
 
