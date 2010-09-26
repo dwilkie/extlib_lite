@@ -22,7 +22,6 @@ begin
     gemspec.email = "dwilkie@gmail.com"
     gemspec.homepage = "http://github.com/dwilkie/extlib_lite"
     gemspec.authors = ["David Wilkie"]
-    gemspec.add_runtime_dependency "addressable", ">=2.1.1"
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"

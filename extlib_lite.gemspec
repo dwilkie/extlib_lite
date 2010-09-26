@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Wilkie"]
-  s.date = %q{2010-07-08}
+  s.date = %q{2010-09-26}
   s.email = %q{dwilkie@gmail.com}
   s.extra_rdoc_files = [
     "README.markdown"
@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
      "extlib_lite.gemspec",
      "lib/extlib_lite.rb",
      "lib/extlib_lite/core_extensions.rb",
-     "lib/extlib_lite/core_extensions/hash.rb",
      "lib/extlib_lite/core_extensions/string.rb",
      "lib/extlib_lite/inflections.rb",
      "todo"
@@ -39,12 +38,9 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<addressable>, [">= 2.1.1"])
     else
-      s.add_dependency(%q<addressable>, [">= 2.1.1"])
     end
   else
-    s.add_dependency(%q<addressable>, [">= 2.1.1"])
   end
 end
 
