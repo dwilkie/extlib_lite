@@ -20,5 +20,17 @@ class String
   def underscore
     Extlib::Inflection.underscore(self)
   end
+
+  def to_const_path
+    snake_case.gsub(/::/, "/")
+  end
+
+  private
+    def snake_case
+      return downcase if match(/\A[A-Z]+\z/)
+      gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').
+      gsub(/([a-z])([A-Z])/, '\1_\2').
+      downcase
+    end
 end
 

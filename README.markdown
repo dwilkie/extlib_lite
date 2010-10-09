@@ -9,6 +9,7 @@ Currently extlib_lite supports the following functions
 * classify
 * constantize
 * underscore
+* to_const_path
 
 ## Installation
 
