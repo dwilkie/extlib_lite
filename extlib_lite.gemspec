@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "extlib_lite.gemspec",
      "lib/extlib_lite.rb",
      "lib/extlib_lite/core_extensions.rb",
+     "lib/extlib_lite/core_extensions/hash.rb",
      "lib/extlib_lite/core_extensions/string.rb",
      "lib/extlib_lite/inflections.rb",
      "todo"

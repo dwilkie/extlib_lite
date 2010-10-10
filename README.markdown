@@ -11,6 +11,9 @@ Currently extlib_lite supports the following functions
 * underscore
 * to_const_path
 
+### Hash
+* stringify
+
 ## Installation
 
     gem install extlib_lite
